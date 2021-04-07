@@ -1,0 +1,4 @@
+{
+  id: pack.id,
+  gear: pack.gear,
+}

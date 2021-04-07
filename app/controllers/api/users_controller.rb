@@ -13,7 +13,7 @@ class Api::UsersController < ApplicationController
     end
   end
 
-  def delete
-    user = User.find_by
-  end
+  # def delete
+  #   user = User.find_by
+  # end
 end
