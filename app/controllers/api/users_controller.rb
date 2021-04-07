@@ -12,4 +12,8 @@ class Api::UsersController < ApplicationController
       render json: { errors: user.errors.full_messages }, status: :bad_request
     end
   end
+
+  def delete
+    user = User.find_by
+  end
 end

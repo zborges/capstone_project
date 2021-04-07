@@ -1,0 +1,5 @@
+{ id: gear.id,
+ name: gear.name,
+ item_description: gear.item_description,
+ item_weight: gear.item_weight,
+ quantity: gear.quantity }
