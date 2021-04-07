@@ -21,17 +21,17 @@ class Api::GearsController < ApplicationController
     render "show.json.jb"
   end
 
-  # def update
-  #   @gear = Gear.find(id: params [:id])
-  #   @gear.name = params[:name] || @gear.name
-  #   @gear.item_description = params[:item_description] || @gear.item_description
-  #   @gear.item_weight = params[:item_weight] || @gear.item_weight
-  #   @gear.quantity = params[:quantity] || @gear.quantity
-  #   if @gear.save
-  #     render "show.json.jb"
-  #   else render json: {errors: @gear.errors.full_messages }, status: 406
-  #   end
-  # end
+  def update
+    input = params[:id]
+    @gear = Gear.find(input)
+    @gear.name = params[:name] || @gear.name
+    @gear.item_description = params[:item_description] || @gear.item_description
+    @gear.item_weight = params[:item_weight] || @gear.item_weight
+    @gear.quantity = params[:quantity] || @gear.quantity
+    if @gear.save
+      render "show.json.jb"
+    else render json: { errors: @gear.errors.full_messages }, status: 406     end
+  end
 
   def destroy
     input = params[:id]
