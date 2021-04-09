@@ -13,7 +13,13 @@ class Api::UsersController < ApplicationController
     end
   end
 
-  # def delete
-  #   user = User.find_by
-  # end
+  def destroy
+    input = params[:id]
+    user = User.find(input)
+    if user.delete
+      render json: { message: "user deleted successfully" }
+    else
+      render json: { errors: user.errors.full_messages }, status: :bad_request
+    end
+  end
 end

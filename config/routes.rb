@@ -17,8 +17,8 @@ Rails.application.routes.draw do
     delete "packs/:id" => "packs#destroy"
 
     post "/users" => "users#create"
+    delete "users/:id" => "users#destroy"
 
     post "/sessions" => "sessions#create"
-
   end
 end
