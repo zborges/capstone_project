@@ -1,5 +1,6 @@
 {
   id: pack.id,
+  pack_name: pack.user.name,
   user_id: pack.user_id,
   gear: pack.gear,
 }

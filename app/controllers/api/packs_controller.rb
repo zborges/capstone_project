@@ -19,11 +19,12 @@ class Api::PacksController < ApplicationController
     render "show.json.jb"
   end
 
-  # def update
-  #   @pack = Pack.find_by(id: params [:id])
-  #   @pack.user_id = params[:user_id] || @pack.user_id
-  #   @pack.gear_id = params[:gear_id] || @pack.gear_id
-  # end
+  def update
+    input = params[:id]
+    @pack = Pack.find(input)
+    @pack.user_id = params[:user_id] || @pack.user_id
+    @pack.gear_id = params[:gear_id] || @pack.gear_id
+  end
 
   def destroy
     input = params[:id]
