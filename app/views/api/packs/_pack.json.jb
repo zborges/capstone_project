@@ -2,5 +2,9 @@
   id: pack.id,
   pack_name: pack.user.name,
   user_id: pack.user_id,
-  gear: pack.gear,
+  gear_name: pack.gear.name,
+  gear_description: pack.gear.item_description,
+  gear_weight: pack.gear.item_weight,
+  gear_quantity: pack.gear.quantity,
+
 }
