@@ -16,6 +16,7 @@ class Api::GearsController < ApplicationController
       item_description: params[:item_description],
       item_weight: params[:item_weight],
       item_quantity: params[:item_quantity],
+      item_url: params[:item_url],
     )
     @gear.save
     render "show.json.jb"

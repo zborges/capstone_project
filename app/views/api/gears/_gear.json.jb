@@ -1,6 +1,6 @@
 { id: gear.id,
-  name: gear.item_name,
+  item_name: gear.item_name,
   item_description: gear.item_description,
   item_weight: gear.item_weight,
-  quantity: gear.item_quantity,
-  url: gear.item_url }
+  item_quantity: gear.item_quantity,
+  item_url: gear.item_url }
