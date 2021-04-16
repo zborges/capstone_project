@@ -1,10 +1,10 @@
 {
   id: pack.id,
-  pack_name: pack.user.name,
+  pack_name: pack.user.item_name,
   user_id: pack.user_id,
-  gear_name: pack.gear.name,
+  gear_name: pack.gear.item_name,
   gear_description: pack.gear.item_description,
   gear_weight: pack.gear.item_weight,
-  gear_quantity: pack.gear.quantity,
+  gear_quantity: pack.gear.item_quantity,
 
 }

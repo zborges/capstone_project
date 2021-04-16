@@ -12,10 +12,10 @@ class Api::GearsController < ApplicationController
 
   def create
     @gear = Gear.new(
-      name: params[:name],
+      item_name: params[:name],
       item_description: params[:item_description],
       item_weight: params[:item_weight],
-      quantity: params[:quantity],
+      item_quantity: params[:quantity],
     )
     @gear.save
     render "show.json.jb"
@@ -24,10 +24,11 @@ class Api::GearsController < ApplicationController
   def update
     input = params[:id]
     @gear = Gear.find(input)
-    @gear.name = params[:name] || @gear.name
+    @gear.name = params[:item_name] || @gear.item_name
     @gear.item_description = params[:item_description] || @gear.item_description
     @gear.item_weight = params[:item_weight] || @gear.item_weight
-    @gear.quantity = params[:quantity] || @gear.quantity
+    @gear.quantity = params[:item_quantity] || @gear.item_quantity
+    @gear.item_url = params[:item_url] || @gear.item_url
     if @gear.save
       render "show.json.jb"
     else render json: { errors: @gear.errors.full_messages }, status: 406     end
