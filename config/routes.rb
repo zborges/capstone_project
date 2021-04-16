@@ -6,13 +6,13 @@ Rails.application.routes.draw do
   namespace :api do
     get "/gears" => "gears#index"
     post "/gears" => "gears#create"
-    get "/gears" => "gears#show"
+    get "/gears/:id" => "gears#show"
     patch "gears/:id" => "gears#update"
     delete "gears/:id" => "gears#destroy"
 
     get "/packs" => "packs#index"
     post "/packs" => "packs#create"
-    get "/packs" => "packs#show"
+    get "/packs/:id" => "packs#show"
     patch "packs/:id" => "packs#update"
     delete "packs/:id" => "packs#destroy"
 
