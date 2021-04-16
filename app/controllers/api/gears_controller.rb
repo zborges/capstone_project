@@ -10,6 +10,7 @@ class Api::GearsController < ApplicationController
     render "show.json.jb"
   end
 
+  # ..
   def create
     @gear = Gear.new(
       item_name: params[:item_name],
