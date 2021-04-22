@@ -13,6 +13,12 @@ class Api::UsersController < ApplicationController
     end
   end
 
+  def show
+    @user = User.find(params[:id])
+
+    render "show.json.jb"
+  end
+
   def destroy
     input = params[:id]
     user = User.find(input)
