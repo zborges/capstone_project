@@ -19,8 +19,14 @@ class Api::GearsController < ApplicationController
       item_quantity: params[:item_quantity],
       item_url: params[:item_url],
     )
-    @gear.save
-    render "show.json.jb"
+    if @gear.save #if gear gets saved, create instance of a packk. Pack.new
+      @pack = Pack.new(user_id: current_user.id,
+                       gear_id: @gear.id)
+      @pack.save
+      render "show.json.jb"
+    else
+      render json: { error: "Gear add error" }
+    end
   end
 
   def update
