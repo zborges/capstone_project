@@ -1,3 +1,3 @@
 class Category < ApplicationRecord
-  belongs_to :gear
+  has_many :gears, through: :category_join
 end

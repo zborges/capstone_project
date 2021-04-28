@@ -21,5 +21,9 @@ Rails.application.routes.draw do
     get "users/:id" => "users#show"
 
     post "/sessions" => "sessions#create"
+
+    delete "/categories/:id" => "categories#destroy"
+    get "/categories" => "categories#index"
+    post "/categories" => "categories#create"
   end
 end
