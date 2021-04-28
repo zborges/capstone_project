@@ -1,4 +1,4 @@
 class Category < ApplicationRecord
-  has_many :gears, through: :category_join
-  has_many :gears
+  has_many :category_joins
+  has_many :gears, through: :category_joins
 end

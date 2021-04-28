@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_04_28_183845) do
+ActiveRecord::Schema.define(version: 2021_04_28_201557) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -22,8 +22,8 @@ ActiveRecord::Schema.define(version: 2021_04_28_183845) do
   end
 
   create_table "category_joins", force: :cascade do |t|
-    t.string "category_id"
-    t.string "gear_id"
+    t.integer "category_id"
+    t.integer "gear_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
@@ -37,7 +37,6 @@ ActiveRecord::Schema.define(version: 2021_04_28_183845) do
     t.datetime "updated_at", precision: 6, null: false
     t.string "item_url"
     t.string "category_id"
-
   end
 
   create_table "packs", force: :cascade do |t|
