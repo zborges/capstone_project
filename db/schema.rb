@@ -10,10 +10,23 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_04_26_192850) do
+ActiveRecord::Schema.define(version: 2021_04_28_183845) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "categories", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "category_joins", force: :cascade do |t|
+    t.string "category_id"
+    t.string "gear_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
 
   create_table "gears", force: :cascade do |t|
     t.string "item_name"
@@ -23,7 +36,8 @@ ActiveRecord::Schema.define(version: 2021_04_26_192850) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.string "item_url"
-    t.string "item_category"
+    t.string "category_id"
+
   end
 
   create_table "packs", force: :cascade do |t|
