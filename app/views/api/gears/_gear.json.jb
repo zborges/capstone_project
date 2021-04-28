@@ -5,3 +5,4 @@
   item_quantity: gear.item_quantity,
   item_url: gear.item_url,
   category_id: gear.category_id }
+ 

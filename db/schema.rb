@@ -37,6 +37,7 @@ ActiveRecord::Schema.define(version: 2021_04_28_183845) do
     t.datetime "updated_at", precision: 6, null: false
     t.string "item_url"
     t.string "category_id"
+
   end
 
   create_table "packs", force: :cascade do |t|
