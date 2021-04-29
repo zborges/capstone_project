@@ -18,7 +18,7 @@ class Api::GearsController < ApplicationController
       item_weight: params[:item_weight],
       item_quantity: params[:item_quantity],
       item_url: params[:item_url],
-      category_id: params[:category_id],
+      # category_id: params[:category_id],
     )
     if @gear.save #if gear gets saved, create instance of a packk. Pack.new
       @pack = Pack.new(user_id: current_user.id,
@@ -38,7 +38,7 @@ class Api::GearsController < ApplicationController
     @gear.item_weight = params[:item_weight] || @gear.item_weight
     @gear.item_quantity = params[:item_quantity] || @gear.item_quantity
     @gear.item_url = params[:item_url] || @gear.item_url
-    @gear.category_id = params[:category_id] || @gear.category_id
+    # @gear.category_id = params[:category_id] || @gear.category_id
 
     if @gear.save
       render "show.json.jb"

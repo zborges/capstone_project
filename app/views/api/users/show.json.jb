@@ -1,1 +1,7 @@
-render partial: "user.json.jb", locals: { user: @user }
+user = render partial: "user.json.jb", locals: { user: @user }
+
+user[:gears] = @user.gears.map do |gear|
+  render partial: "/api/gears/gear", locals: { gear: gear }
+end
+user
+# map through gears in partial and add to user show..
