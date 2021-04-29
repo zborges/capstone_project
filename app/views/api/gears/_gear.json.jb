@@ -4,4 +4,4 @@
   item_weight: gear.item_weight,
   item_quantity: gear.item_quantity,
   item_url: gear.item_url,
-  category: gear.categories[0].name }
+  category: gear.categories }
