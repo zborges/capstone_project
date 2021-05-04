@@ -1,0 +1,6 @@
+@gear.map do |gear|
+  {
+    id: gear.id,
+    item_weight: gear.item_weight,
+  }
+end

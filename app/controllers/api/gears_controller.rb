@@ -4,6 +4,12 @@ class Api::GearsController < ApplicationController
     render "index.json.jb"
   end
 
+  def weight
+    @gear = Gear.all
+
+    render "gear_weight.json.jb"
+  end
+
   def show
     @input = params[:id]
     @gear = Gear.find(@input)
