@@ -2,5 +2,6 @@
   {
     id: gear.id,
     item_weight: gear.item_weight,
+    category_id: gear.category_joins,
   }
 end

@@ -1,4 +1,9 @@
 class Api::CategoryJoinController < ApplicationController
+  def index
+    @category_join = CategoryJoin.all
+    render "index.json.jb"
+  end
+
   def create
     @category_join = CategoryJoin.new(
       category_id: params[:category_id],

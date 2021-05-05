@@ -28,6 +28,6 @@ Rails.application.routes.draw do
     post "/categories" => "categories#create"
 
     post "/category_join" => "category_join#create"
-
+    get "/category_join" => "category_join#index"
   end
 end

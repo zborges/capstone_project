@@ -6,7 +6,6 @@ class Api::GearsController < ApplicationController
 
   def weight
     @gear = Gear.all
-
     render "gear_weight.json.jb"
   end
 
