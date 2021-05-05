@@ -29,6 +29,12 @@ class Api::GearsController < ApplicationController
       @pack = Pack.new(user_id: current_user.id,
                        gear_id: @gear.id)
       @pack.save
+
+      @category_join = CategoryJoin.new(
+        category_id: params[:category_id],
+        gear_id: @gear.id,
+      )
+      @category_join.save
       render "show.json.jb"
     else
       render json: { error: "Gear add error" }
