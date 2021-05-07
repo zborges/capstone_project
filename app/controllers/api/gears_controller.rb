@@ -26,18 +26,17 @@ class Api::GearsController < ApplicationController
       # category_id: params[:category_id],
     )
     if @gear.save #if gear gets saved, create instance of a packk. Pack.new
-      @pack = Pack.new(user_id: current_user.id,
-                       gear_id: @gear.id)
-      @pack.save
-
-      @category_join = CategoryJoin.new(
+      Pack.create(user_id: current_user.id,
+                  gear_id: @gear.id)
+      # @pack.save
+      CategoryJoin.create(
         category_id: params[:category_id],
         gear_id: @gear.id,
       )
-      @category_join.save
+      # @category_join.save
       render "show.json.jb"
     else
-      render json: { error: "Gear add error" }
+      render json: { error: @gear.errors.full_messages }
     end
   end
 
