@@ -1,24 +1,3 @@
-# README
+#First full project completed independently to showcase what I learned in Bootcamp. I plan on keeping up with this application and refactoring to include an instant messenger between users.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+There are many things I would do differently if I were to restart this project.
