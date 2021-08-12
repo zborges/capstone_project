@@ -1,24 +1,7 @@
-# README
+First full project completed independently to showcase what I learned in Bootcamp. I plan on keeping up with this application and refactoring to include an instant messenger between users.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Backend for: 
+A CRUD web app using Ruby, Vue.js, HTML/CSS that allows backpackers/hikers to track the gear they plan on bringing on adventures. The gear can be separated into categories, and uses a responsive graph that adjusts depending on the weight of each item, as well as the total pack weight.
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## Frontend :
+https://github.com/zackartborges/capstone_project_vue
