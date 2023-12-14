@@ -13,44 +13,44 @@
 ActiveRecord::Schema.define(version: 2021_05_05_142402) do
 
   # These are extensions that must be enabled in order to support this database
-  enable_extension "plpgsql"
+  enable_extension 'plpgsql'
 
-  create_table "categories", force: :cascade do |t|
-    t.string "name"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
+  create_table 'categories', force: :cascade do |t|
+    t.string 'name'
+    t.datetime 'created_at', precision: 6, null: false
+    t.datetime 'updated_at', precision: 6, null: false
   end
 
-  create_table "category_joins", force: :cascade do |t|
-    t.integer "category_id"
-    t.integer "gear_id"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
+  create_table 'category_joins', force: :cascade do |t|
+    t.integer 'category_id'
+    t.integer 'gear_id'
+    t.datetime 'created_at', precision: 6, null: false
+    t.datetime 'updated_at', precision: 6, null: false
   end
 
-  create_table "gears", force: :cascade do |t|
-    t.string "item_name"
-    t.text "item_description"
-    t.float "item_weight"
-    t.integer "item_quantity"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.string "item_url"
+  create_table 'gears', force: :cascade do |t|
+    t.string 'item_name'
+    t.text 'item_description'
+    t.float 'item_weight'
+    t.integer 'item_quantity'
+    t.datetime 'created_at', precision: 6, null: false
+    t.datetime 'updated_at', precision: 6, null: false
+    t.string 'item_url'
   end
 
-  create_table "packs", force: :cascade do |t|
-    t.integer "user_id"
-    t.integer "gear_id"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
+  create_table 'packs', force: :cascade do |t|
+    t.integer 'user_id'
+    t.integer 'gear_id'
+    t.datetime 'created_at', precision: 6, null: false
+    t.datetime 'updated_at', precision: 6, null: false
   end
 
-  create_table "users", force: :cascade do |t|
-    t.string "name"
-    t.string "email"
-    t.string "password_digest"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
+  create_table 'users', force: :cascade do |t|
+    t.string 'name'
+    t.string 'email'
+    t.string 'password_digest'
+    t.datetime 'created_at', precision: 6, null: false
+    t.datetime 'updated_at', precision: 6, null: false
   end
 
 end
