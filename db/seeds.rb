@@ -36,17 +36,17 @@
 #   { item_name: "Zpacks 10 Degree Down Sleeping Bag", item_description: "Sleeping bag", item_weight: 22.7, item_quantity: 1, item_url: nil },
 #   { item_name: "Big Agnes TigerWall UL3", item_description: "A tent for 3. Lightweight and compact.", item_weight: 33.6, item_quantity: 1, item_url: "https://www.rei.com/product/128991/big-agnes-tiger-wall-ul3-tent" },
 # ])
-# Category.create!([
-#   { name: "Clothing" },
-#   { name: "Cookware and Filtration" },
-#   { name: "Electronics" },
-#   { name: "Toiletries" },
-#   { name: "Repair and Med Kit" },
-#   { name: "Shoes" },
-#   { name: "Misc." },
-#   { name: "Shelter and Sleep System" },
-#   { name: "Big 3 + Sleep Pad" },
-# ])
+Category.create!([
+  { name: "Clothing" },
+  { name: "Cookware and Filtration" },
+  { name: "Electronics" },
+  { name: "Toiletries" },
+  { name: "Repair and Med Kit" },
+  { name: "Shoes" },
+  { name: "Misc." },
+  { name: "Shelter and Sleep System" },
+  { name: "Big 3 + Sleep Pad" },
+])
 # CategoryJoin.create!([
 #   { category_id: 22, gear_id: 2 },
 #   { category_id: 22, gear_id: 3 },

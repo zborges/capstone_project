@@ -6,5 +6,4 @@
   gear_description: pack.gear.item_description,
   gear_weight: pack.gear.item_weight,
   gear_quantity: pack.gear.item_quantity,
-
 }
