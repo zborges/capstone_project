@@ -1,1 +1,0 @@
-render partial: "gear.json.jb", locals: {gear: @gear}

@@ -1,9 +1,7 @@
 {
-  id: pack.id,
-  pack_name: pack.user.name,
-  user_id: pack.user_id,
-  gear_name: pack.gear.item_name,
-  gear_description: pack.gear.item_description,
-  gear_weight: pack.gear.item_weight,
-  gear_quantity: pack.gear.item_quantity,
+  user_id: pack.user.id,
+  item_name: pack.item.name,
+  item_description: pack.item.description,
+  item_weight: pack.item.weight,
+  item_quantity: pack.item.quantity,
 }

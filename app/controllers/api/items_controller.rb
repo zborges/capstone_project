@@ -18,7 +18,7 @@ class Api::ItemsController < ApplicationController
   # ..
   def create
     @item = item.new(
-      item_name: params[:item_name],
+      name: params[:name],
       item_description: params[:item_description],
       item_weight: params[:item_weight],
       item_quantity: params[:item_quantity],
@@ -30,13 +30,7 @@ class Api::ItemsController < ApplicationController
 
     
     if @item.save #if item gets saved, create instance of a pack. Pack.new
-      Pack.create(user_id: current_user.id,
-                  item_id: @item.id)
-      # @pack.save
-      CategoryJoin.create(
-        category_id: params[:category_id],
-        item_id: @item.id,
-      )
+      # @pack.sav
       # @category_join.save
       render "show.json.jb"
     else

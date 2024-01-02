@@ -7,6 +7,10 @@ class Api::UsersController < ApplicationController
       password_confirmation: params[:password_confirmation],
     )
     if user.save
+      @pack = Pack.new(
+        user_id: user.id,
+      )
+      @pack.save
       render json: { message: "User created successfully" }, status: :created
     else
       render json: { errors: user.errors.full_messages }, status: :bad_request
@@ -15,7 +19,12 @@ class Api::UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id])
-    render "show.json.jb"
+    # byebug
+    if @user.pack.items.empty?
+      render json: "User does not have any gear"
+    else
+      render "show.json.jb"
+    end
   end
 
   def destroy
