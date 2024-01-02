@@ -13,7 +13,6 @@ class Api::PacksController < ApplicationController
   def create
     @pack = Pack.new(
       user_id: params[:user_id],
-      gear_id: params[:gear_id],
     )
     @pack.save
     render "show.json.jb"

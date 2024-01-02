@@ -1,3 +1,0 @@
-@pack.map do |pack|
-  render partial: "pack.json.jb", locals: { pack: pack }
-end

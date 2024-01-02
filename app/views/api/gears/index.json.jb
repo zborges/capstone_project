@@ -1,3 +1,0 @@
-@gear.map do |gear|
-  render partial: "gear.json.jb", locals: { gear: gear }
-end
