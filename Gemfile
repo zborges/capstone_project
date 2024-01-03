@@ -45,3 +45,5 @@ gem 'rack-cors'
 gem 'jb'
 gem 'jwt'
 gem 'seed_dump'
+gem 'active_model_serializers', '~> 0.10.12'
+

@@ -21,7 +21,7 @@ Rails.application.routes.draw do
     delete "users/:id" => "users#destroy"
     get "users/:id" => "users#show"
 
-    post "/sessions" => "sessions#create"
+    post "/auth/login" => "auth#login"
 
     delete "/categories/:id" => "categories#destroy"
     get "/categories" => "categories#index"
